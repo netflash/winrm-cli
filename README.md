@@ -60,4 +60,19 @@ Once built, you can run remote commands like this:
 ./winrm -hostname remote.domain.com -username "Administrator" -password "secret" "ipconfig /all"
 ```
 
+## Docker
+
+### Build container
+
+```
+docker build -t winrm .
+```
+
+### Usage
+
+Once build, you can run remote commands like this:
+
+```sh
+docker run -it --rm winrm winrm -hostname remote.domain.com -username "Administrator" -password "secret" "ipconfig /all"
+```
 
